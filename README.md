@@ -10,7 +10,7 @@ For example:
 export DOWNLOADS_DIR="/Users/alfardilalam/Downloads"
 ```
 
-Then you can run `latexmk -pdf resume.tex` to autogenerate your pdf in your desired output directory.
+Then you can run `latexmk -pdf resume.tex` to autogenerate your pdf in your desired output directory. Your PDF will also autogenerate on save.
 
 `latexmk -C` will clean any junk files.
 
