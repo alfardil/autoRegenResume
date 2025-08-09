@@ -1,0 +1,183 @@
+% === Document Class \& Packages =======================================
+\documentclass[11pt]{article}
+%\usepackage{showframe}				% Shows the margins of the document.
+\usepackage[margin=0.5in]{geometry} % Sets the margin of the document.
+\usepackage{tabularx}
+\usepackage{xhfill}                % For custom horizontal rules if needed.
+\usepackage{color}
+\usepackage{fontawesome}
+\usepackage{charter}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!70!black}
+}
+\usepackage{enumitem}              % For controlling list environments.
+
+% === Document Properties ===============================================
+\setlength{\parindent}{0pt}        % Disable paragraph indentation.
+\pagenumbering{gobble}            % Disable page numbering.
+\renewcommand{\baselinestretch}{1} 
+\definecolor{header-color}{HTML}{FFFFFF}
+
+% === Define Variables ==================================================
+\newcommand{\name}{Alfardil Alam}
+\newcommand{\addressCity}{New York, NY}
+\newcommand{\phone}{(917)\,399-4480}
+\newcommand{\email}{\href{mailto:aa11101@nyu.edu}{alfardil.alam\,@\,nyu.edu}}
+\newcommand{\github}{\href{https://github.com/alfardil}{github.com/alfardil}}
+\newcommand{\web}{\href{https://alfardil.com}{alfardil.com}}
+\newcommand{\majors}{B.A Computer Science and Mathematics}
+\newcommand{\coursework}{\scriptsize{Data Structures \& Algorithms, Basic Algorithms, Operating Systems, Software Engineering, Linear Algebra, Multivariable Calculus}}
+\newcommand{\awards}{\scriptsize{Winner Hack@Brown 2025}}
+
+
+% === Custom Commands / Environments for Resume =========================
+% 1 A command for each major section
+\newcommand{\resumeSection}[1]{%
+  \rule{0.04\textwidth}{0.4pt}%
+  \textbf{\Large \uppercase{#1}}%
+  \hrulefill\\[0.2em]
+}
+
+% 2 Itemize environment for main bullets
+\newenvironment{resumeItemize}{%
+  \setlist{nolistsep}
+  \begin{itemize}[leftmargin=*, label=\textbullet, itemsep=0.3em]
+}{%
+  \end{itemize}
+}
+
+% % 3 Nested itemize environment for sub-bullets
+% \newenvironment{resumeSubItemize}{%
+%   \begin{itemize}[leftmargin=1.25em, label=\(\circ\), itemsep=0em]
+% }{%
+%   \end{itemize}
+% }
+
+\newenvironment{resumeTinyItemizse}{%
+  \setlist{nolistsep}
+  \begin{itemize}[leftmargin=*, label=\textbullet, itemsep=0em]
+}{%
+  \end{itemize}
+}
+
+
+% 4 Handy commands to start each bullet or sub-bullet
+%    - Normal size for top-level bullets
+%    - Smaller font for sub-bullets
+\newcommand{\resumeItem}[1]{\item \normalsize \textbf{#1}}
+\newcommand{\resumeSubItem}[1]{\item \small #1}
+\newcommand{\resumeTinyItem}[1]{\item \footnotesize #1}
+\newcommand{\githubLink}[2]{{\small \faGithub\ \textit{\href{#1}{#2}}}}
+\newcommand{\webLink}[2]{{\small \faGlobe\ \textit{\href{#1}{#2}}}}
+\newcommand{\duplicate}[2]{{\small \faGlobe\ \textit{\href{#1}{#2}}}}
+
+\begin{document}
+%----------------------
+% === Header / Personal Information =====================================
+{\Huge \textbf{\name}} \\ [0.3em]
+\faMapMarker \ \addressCity
+\ \ \ \faMobile \ \phone
+\ \ \ \faEnvelopeO \ \email
+% \ \ \ \faGlobe \ \web 
+\ \ \ \faGithub \ \github
+
+\bigskip
+
+% === Education Section ================================================
+\resumeSection{Education}
+\textbf{\Large New York University} $|$ New York, NY \hfill Sep 2023 -- May 2027 \\
+\textit{\majors}  \\ [0.2em]
+% \hfill GPA: 3.3
+\scriptsize{Relevant Coursework:} \textit{\coursework} \\
+\scriptsize{Awards: }\textit{\awards}
+
+% \textbf{\Large Stuyvesant High School} $|$ New York, NY \hfill Sep. 2019 -- Jun. 2023
+
+\bigskip
+
+% === Experience Section ===============================================
+\resumeSection{Experience}
+\\[-0.7em]
+\textbf{\large Web Developer}, New York, NY \hfill Jan 2025 -- May 2025 \\ [0.25em]
+\textbf{NYU High Speed Research Network}
+\begin{resumeItemize}
+  \resumeSubItem{Worked with Docker-based deployments for authentication services using Keycloak SSO and
+    Netbox cloud-based authentication, then streamlined device/MAC address management within a custom dashboard
+    through Knex queries.}
+  \resumeSubItem{Created RESTful API functions to manage CRUD operations for interacting with
+    the cloud instance. Optimized internal database queries to ensure low latency for a fiber cable network boasting up to 100 gbps.}
+\end{resumeItemize}
+
+\medskip
+
+\textbf{\large Software Engineer Intern}, New York, NY \hfill May 2025 -- Present \\ [0.25em]
+\textbf{Lexor Strategies}
+\begin{resumeItemize}
+  \resumeSubItem{Spearhead development of a college rental platform with 450+ buildings scraped using web crawlers.
+    Present estimated database costs to clients to optimize client infrastructure planning.}
+  \resumeSubItem{Pitched automation tools at networking events, expanding the client pipeline + driving adoption
+    across diverse industries.}
+\end{resumeItemize}
+
+\medskip
+
+\textbf{\large Software Developer}, Bronx, NY \hfill Feb 2023 -- Present \\ [0.25em]
+\textbf{Synergy Prep}
+\begin{resumeItemize}
+  \resumeSubItem{Maintained an AI web app written in Flask \& React that generates documents with user-selected
+    topics to eliminate academic weaknesses. Used by \textbf{200+} students with over \textbf{7000+} messages sent \& \textbf{800+} documents generated.}
+  \resumeSubItem{Prepared customized math lessons for 7th and 8th grade students to excel in the SHSAT. Provided
+    discrete AMC solutions and college preparation tips to 11th graders, increasing test readiness. Boosted diagnostic scores by up to 40\%.}
+\end{resumeItemize}
+
+\medskip
+
+\bigskip
+% === Projects Section ==================================================
+\resumeSection{Projects}
+\\[-0.7em]
+\textbf{\large CodeBloom} \hfill \duplicate{https://codebloom.patinanetwork.org}{codebloom.patinanetwork.org} $|$ \githubLink{https://github.com/tahminator/codebloom}{github.com/tahminator/codebloom}
+\begin{resumeItemize}
+  \resumeSubItem{Developed a competitive coding platform using React \& SpringBoot, allowing Patina Network mentees to track \& compare LeetCode progress on a real-time leaderboard with the goal of providing motivation to the community.}
+  \resumeSubItem{Reverse engineered \& integrated GraphQL queries from leetcode.com in order to access data programmatically and bypass rate-limiting of existing APIs. Tracked over \textbf{5000} questions with \textbf{120+} users and \textbf{20+} stars on Github.}
+  \resumeSubItem{Optimized custom SQL queries to create RESTful API endpoints, custom objects, and database models to store and retrieve data efficiently through Postgres. Set up scheduled tasks to regularly fetch data through background tasks.}
+\end{resumeItemize}
+
+\medskip
+
+\textbf{\large Devboard} \footnotesize{-- AI Project Management Tool} \hfill \duplicate{https://devboard.ai}{devboard.ai}
+\begin{resumeItemize}
+  \resumeSubItem{Streamlined the developer onboarding process by leveraging an agentic chain of flow with LLMs to build a pipeline with FastAPI that generates coherent system diagrams with Mermaid.js and code explanations. Indexed 8k+ code chunks.}
+  \resumeSubItem{Implemented RAG using pgvector embeddings to reduce LLM hallucinations dramatically by retrieving chunks from Postgres. Stored and retrieved data with raw SQL queries maintaining a warm async connection to reduce latency.}
+  \resumeSubItem{Integrated Github’s GraphQL API to fetch repo metadata and file contents, powering authenticated data hooks and prioritizing RAG queries on highlighted code files.}
+\end{resumeItemize}
+
+\bigskip
+
+% === Skills Section ====================================================
+\rule{0.04\textwidth}{0.4pt}%
+\textbf{\Large \uppercase{Skills}}% 
+\hrulefill
+\\[-0.9em]
+\begin{resumeTinyItemizse}
+  \resumeTinyItem{\textbf{Languages:} Java, TypeScript, Python, C}
+  \resumeTinyItem{\textbf{Web Development:} HTML, CSS, React, Next.js, Nodejs, JSON, Vite, Knex, Jest, pnpm, Express.js, Flask, Spring, React Query}
+  \resumeTinyItem{\textbf{Database:} SQL, Postgres, SQLite, Firebase, MongoDB, Neon, DrizzleORM, Prisma, Flyway DBeaver, TablePlus}
+  \resumeTinyItem{\scriptsize{\textbf{Others:} Git, Docker, AWS, DigitalOcean, Docker, Bash, CI/CD, OpenAI, Langchain, Stripe, Fly.io, Nodemailer, Postman, VSCode, Maven, K8s}}
+\end{resumeTinyItemizse}
+
+\bigskip
+
+% === Leadership Section ==================================================
+\resumeSection{Leadership} \\ [-0.3em]
+\textbf{\large Men's Ultimate Frisbee} -- Captain \hfill Sep 2021 -- Present \\[-0.9em]
+\begin{resumeTinyItemizse}
+  \resumeTinyItem{Managed \$25k in donations and school funding while coordinating travel, accommodations, and game schedules for 25+ athletes across multiple out-of-state tournaments; also boosted team visibility through social media content that attracted 20k+ viewers and hundreds of new followers.}
+\end{resumeTinyItemizse}
+
+\end{document}
