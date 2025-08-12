@@ -91,8 +91,8 @@
 \bigskip
 
 % === Education Section ================================================
-\resumeSection{Education}
-\textbf{\Large New York University} $|$ New York, NY \hfill Sep 2023 -- May 2027 \\
+\resumeSection{Education} \\ [-0.6em]
+\textbf{\Large New York University} $|$ New York, NY \hfill {\small Sep 2023 -- May 2027} \\
 \textit{\majors}  \\ [0.2em]
 % \hfill GPA: 3.3
 \scriptsize{Relevant Coursework:} \textit{\coursework} \\
@@ -105,30 +105,34 @@
 % === Experience Section ===============================================
 \resumeSection{Experience}
 \\[-0.7em]
-\textbf{\large Web Developer}, New York, NY \hfill Jan 2025 -- May 2025 \\ [0.25em]
-\textbf{NYU High Speed Research Network}
-\begin{resumeItemize}
-  \resumeSubItem{Worked with Docker-based deployments for authentication services using Keycloak SSO and
-    Netbox cloud-based authentication, then streamlined device/MAC address management within a custom dashboard
-    through Knex queries.}
-  \resumeSubItem{Created RESTful API functions to manage CRUD operations for interacting with
-    the cloud instance. Optimized internal database queries to ensure low latency for a fiber cable network boasting up to 100 gbps.}
-\end{resumeItemize}
-
-\medskip
-
-\textbf{\large Software Engineer Intern}, New York, NY \hfill May 2025 -- Present \\ [0.25em]
+\textbf{\large Software Engineer Intern}, New York, NY \hfill {\small May 2025 -- Aug 2025} \\ [0.25em]
 \textbf{Lexor Strategies}
 \begin{resumeItemize}
-  \resumeSubItem{Spearhead development of a college rental platform with 450+ buildings scraped using web crawlers.
-    Present estimated database costs to clients to optimize client infrastructure planning.}
+  \resumeSubItem{Developed \textbf{Fome}, a college rental platform, with \textbf{450+} buildings scraped using web crawlers.
+    Presented estimated database costs to clients to optimize client infrastructure planning.}
+  \resumeSubItem{Patched OAuth implementation on Expo handling PKCE, ensuring secure authentication and accurate client data retrieval.}
   \resumeSubItem{Pitched automation tools at networking events, expanding the client pipeline + driving adoption
     across diverse industries.}
 \end{resumeItemize}
 
 \medskip
 
-\textbf{\large Software Developer}, Bronx, NY \hfill Feb 2023 -- Present \\ [0.25em]
+\textbf{\large Web Developer}, New York, NY \hfill {\small Jan 2025 -- May 2025} \\ [0.25em]
+\textbf{NYU High Speed Research Network}
+\begin{resumeItemize}
+  \resumeSubItem{Worked with Docker-based deployments for authentication services using Keycloak SSO and
+    Netbox cloud-based authentication, then streamlined device/MAC address management within a custom dashboard
+    through Knex queries.}
+  \resumeSubItem{Created RESTful API functions to manage CRUD operations for interacting with
+    the cloud instance.}
+  \resumeSubItem{ Optimized internal database queries to ensure low latency for a fiber cable network boasting up to 100 gbps.}
+\end{resumeItemize}
+
+\medskip
+
+
+
+\textbf{\large Software Developer}, Bronx, NY \hfill {\small Feb 2023 -- Present} \\ [0.25em]
 \textbf{Synergy Prep}
 \begin{resumeItemize}
   \resumeSubItem{Maintained an AI web app written in Flask \& React that generates documents with user-selected
@@ -137,24 +141,24 @@
     discrete AMC solutions and college preparation tips to 11th graders, increasing test readiness. Boosted diagnostic scores by up to 40\%.}
 \end{resumeItemize}
 
-\medskip
-
 \bigskip
+
 % === Projects Section ==================================================
 \resumeSection{Projects}
-\\[-0.7em]
+\\[-0.5em]
 \textbf{\large CodeBloom} \hfill \duplicate{https://codebloom.patinanetwork.org}{codebloom.patinanetwork.org} $|$ \githubLink{https://github.com/tahminator/codebloom}{github.com/tahminator/codebloom}
 \begin{resumeItemize}
   \resumeSubItem{Developed a competitive coding platform using React \& SpringBoot, allowing Patina Network mentees to track \& compare LeetCode progress on a real-time leaderboard with the goal of providing motivation to the community.}
-  \resumeSubItem{Reverse engineered \& integrated GraphQL queries from leetcode.com in order to access data programmatically and bypass rate-limiting of existing APIs. Tracked over \textbf{5000} questions with \textbf{120+} users and \textbf{20+} stars on Github.}
+  \resumeSubItem{Reverse engineered \& integrated GraphQL queries from leetcode.com in order to access data programmatically and bypass rate-limiting of existing APIs. Tracked over \textbf{6000} questions with \textbf{120+} users and \textbf{20+} stars on Github.}
   \resumeSubItem{Optimized custom SQL queries to create RESTful API endpoints, custom objects, and database models to store and retrieve data efficiently through Postgres. Set up scheduled tasks to regularly fetch data through background tasks.}
 \end{resumeItemize}
 
 \medskip
 
-\textbf{\large Devboard} \footnotesize{-- AI Project Management Tool} \hfill \duplicate{https://devboard.ai}{devboard.ai}
+\textbf{\large Devboard}\footnotesize{, AI Project Management Tool} \hfill \duplicate{https://devboard.ai}{devboard.ai} $|$ \githubLink{https://github.com/alfardil/gitty}{github.com/alfardil/gitty}
 \begin{resumeItemize}
-  \resumeSubItem{Streamlined the developer onboarding process by leveraging an agentic chain of flow with LLMs to build a pipeline with FastAPI that generates coherent system diagrams with Mermaid.js and code explanations. Indexed 8k+ code chunks.}
+  \resumeSubItem{Created a FastAPI pipeline using an agentic LLM workflow to simplify developer onboarding,
+    generating coherent Mermaid.js system diagrams and detailed code explanations.}
   \resumeSubItem{Implemented RAG using pgvector embeddings to reduce LLM hallucinations dramatically by retrieving chunks from Postgres. Stored and retrieved data with raw SQL queries maintaining a warm async connection to reduce latency.}
   \resumeSubItem{Integrated Github’s GraphQL API to fetch repo metadata and file contents, powering authenticated data hooks and prioritizing RAG queries on highlighted code files.}
 \end{resumeItemize}
@@ -162,10 +166,7 @@
 \bigskip
 
 % === Skills Section ====================================================
-\rule{0.04\textwidth}{0.4pt}%
-\textbf{\Large \uppercase{Skills}}% 
-\hrulefill
-\\[-0.9em]
+\resumeSection{Skills} \\ [-2.3em]
 \begin{resumeTinyItemizse}
   \resumeTinyItem{\textbf{Languages:} Java, TypeScript, Python, C}
   \resumeTinyItem{\textbf{Web Development:} HTML, CSS, React, Next.js, Nodejs, JSON, Vite, Knex, Jest, pnpm, Express.js, Flask, Spring, React Query}
@@ -176,8 +177,8 @@
 \bigskip
 
 % === Leadership Section ==================================================
-\resumeSection{Leadership} \\ [-0.3em]
-\textbf{\large Men's Ultimate Frisbee} -- Captain \hfill Sep 2021 -- Present \\[-0.9em]
+\resumeSection{Leadership} \\ [-0.6em]
+\textbf{\large Men's Ultimate Frisbee} -- Captain \hfill {\small Sep 2021 -- Present} \\[-1em]
 \begin{resumeTinyItemizse}
   \resumeTinyItem{Managed \$25k in donations and school funding while coordinating travel, accommodations, and game schedules for 25+ athletes across multiple out-of-state tournaments; also boosted team visibility through social media content that attracted 20k+ viewers and hundreds of new followers.}
 \end{resumeTinyItemizse}
